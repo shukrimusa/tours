@@ -1,27 +1,19 @@
-.flex-child {
-    margin: 4px;
-    padding: 4px;
-    background: grey;
-    
-}
-
-.container-flex {
-    background: yellow;
-    margin: 4px;
-    height: 100px;
+.box {
+    width: 500px;
+    height: 500px;
+    background: red;
     display: flex;
-    align-items: start;
-    
-   
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: 10px solid black;
+    -webkit-mask: linear-gradient(#000 0 0),
+   linear-gradient(#000 0 0);
+   -webkit-mask-clip: text, padding-box;
+   -webkit-mask-composite:xor;
 }
 
-.container-inline-flex {
-    background: yellow;
-    width: 100px;
-    margin: 4px;
-    height: 100px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-
+.box h1 {
+    font-size: 100px;
+    
 }
