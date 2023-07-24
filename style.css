@@ -68,6 +68,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .slider .slide {
@@ -81,6 +82,12 @@
     height: 100%;
     object-fit: cover;
     pointer-events: none;
+    opacity: 0;
+    transition: .3s ease ;
+}
+
+.slide.active img{
+   opacity: 1;
 }
 
 .slide .left-info {
@@ -89,7 +96,14 @@
     left: 0;
     width: 50%;
     height: 100%;
+    transform: translateX(-100%);
+    transition: 0s;
     
+}
+
+.slide.active .left-info {
+    transform: transLateX(0);
+    transition: 0.5s ease;
 }
 
 .left-info .penetrate-blur {
@@ -105,6 +119,7 @@
    linear-gradient(#000 0 0);
    -webkit-mask-clip: text, padding-box;
    -webkit-mask-composite:xor;
+   padding-right: 20px;
    
   
 }
@@ -112,7 +127,14 @@
     font-size: 250px;
     color: #fff;
     text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+   
 }
+
+.slide:nth-child(1) .penetrate-blur h1,
+.slide:nth-child(4) .penetrate-blur h1 {
+margin-right: -10px
+}
+
 
 .left-info .content {
     position: absolute;
@@ -124,11 +146,15 @@
 
 .content h3 {
     font-size: 20px;
+  
 }
+
+
 
 .content p {
     font-size: 16px;
-    margin: 10px 0 15px
+    margin: 10px 0 15px;
+   
 }
 
 .content .btn {
@@ -158,11 +184,25 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    transform: translateX(100%);
+    transition: 0s
+}
+
+.slide.active .right-info {
+    transform: translateX(0);
+    transition: 0.5s ease;
 }
 .right-info h1 {
     font-size: 250px;
     color: #fff;
 }
+
+.slide:nth-child(3) .right-info h1, 
+.slide:nth-child(5) .right-info h1 {
+    margin-left: 10px
+}
+
+
 .right-info h3 {
     position: absolute;
     font-size: 80px;
