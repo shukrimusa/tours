@@ -1,9 +1,5 @@
-"# project7" 
+## Tours
+It is a beautiful dynamic website focusing on HTML, CSS, and JavaScript.
 
-line 104
-  -webkit-mask: linear-gradient(#000 0 0),
-   linear-gradient(#000 0 0);
-   -webkit-mask-clip: text, padding-box;
-   -webkit-mask-composite:xor
 
 
